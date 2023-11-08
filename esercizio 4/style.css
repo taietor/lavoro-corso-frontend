@@ -48,3 +48,18 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.interest-checkbox input {
+  margin-right: 5px;
+}

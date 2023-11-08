@@ -16,8 +16,62 @@
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
-        <label for="motivo">Motivo del Contatto:</label>
+        <label for="genere">Genere:</label>
 
+        <select id="genere" name="genere" required>
+          <option value="M">Maschio</option>
+          <option value="F">Femmina</option>
+          <option value="A">Altro</option>
+        </select>
+
+        <label for="interessi">Interessi:</label>
+        <div class="interests-container">
+          <div class="interest-checkbox">
+            <input
+              type="checkbox"
+              id="sport"
+              name="interessi[]"
+              value="sport"
+            />
+            <label for="sport">Sport</label>
+          </div>
+
+          <div class="interest-checkbox">
+            <input
+              type="checkbox"
+              id="musica"
+              name="interessi[]"
+              value="musica"
+            />
+            <label for="musica">Musica</label>
+          </div>
+
+          <div class="interest-checkbox">
+            <input
+              type="checkbox"
+              id="cinema"
+              name="interessi[]"
+              value="cinema"
+            />
+            <label for="cinema">Cinema</label>
+          </div>
+
+          <div class="interest-checkbox">
+            <input type="checkbox" id="arte" name="interessi[]" value="arte" />
+            <label for="arte">Arte</label>
+          </div>
+        </div>
+        <br />
+
+        <label for="file">Carica un file:</label>
+        <input
+          type="file"
+          id="file"
+          name="file"
+          accept="image/*, application/pdf"
+        />
+
+        <label for="motivo">Motivo del Contatto:</label>
         <select id="motivo" name="motivo" required>
           <option value="domanda">Domanda</option>
           <option value="feedback">Feedback</option>
