@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ecf0f1; /* Colore di sfondo */
+  transition: background-color 0.5s ease;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, transform 0.3s ease; /* Aggiunta transizione per l'animazione */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#red {
+  background-color: #e74c3c; /* Rosso */
+}
+
+#blue {
+  background-color: #3498db; /* Blu */
+  margin-left: 200px;
+}
+
+#yellow {
+  background-color: #f1c40f; /* Giallo */
+  margin-left: 400px;
+}
+
+.square:hover {
+  background-color: #ffffff; /* Bianco al passaggio del mouse */
+  transform: scale(1.1);
+}
