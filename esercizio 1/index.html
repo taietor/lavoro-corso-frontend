@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <title>Libro delle Ricette</title>
+  </head>
+  <body>
+    <!-- Zona del menu -->
+  <div class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <li>
+            <img src="img/download.jpeg" alt="Nome del piatto 1">
+            <p>Descrizione del piatto 1</p>
+        </li>
+        <li>
+            <img src="img/kebabjpg.jpg" alt="Nome del piatto 2">
+            <p>Descrizione del piatto 2</p>
+        </li>
+        <!-- Aggiungi ulteriori voci del menu con immagini e descrizioni -->
+    </ul>
+</div>
+
+    <h1>Libro delle Ricette</h1>
+
+    <!-- Form per inserire una nuova ricetta -->
+    <h2>Inserisci una nuova ricetta</h2>
+    <form id="recipeForm">
+      <label for="recipeName">Nome della Ricetta:</label>
+      <input type="text" id="recipeName" name="recipeName" required />
+      <br />
+      <br />
+
+      <label for="recipeIngredients">Ingredienti:</label>
+      <textarea
+        id="recipeIngredients"
+        name="recipeIngredients"
+        required
+      ></textarea>
+      <br />
+      <br />
+
+      <label for="recipeInstructions">Istruzioni:</label>
+      <textarea
+        id="recipeInstructions"
+        name="recipeInstructions"
+        required
+      ></textarea>
+      <br />
+      <br />
+
+      <input type="submit" value="Aggiungi Ricetta" />
+    </form>
+    <br />
+    <!-- Pulsante per eliminare tutte le ricette -->
+    <button id="deleteAllRecipes">Elimina tutte le ricette</button>
+
+    <!-- Lista delle ricette -->
+    <h2>Elenco delle Ricette</h2>
+    <ul id="recipeList"></ul>
+  </ul>
+
+  
+
+    <script>
+      // Funzione per eliminare tutte le ricette
+      function deleteAllRecipes() {
+        localStorage.removeItem("recipes"); // Rimuovi le ricette dall'archivio locale
+        displayRecipes(); // Aggiorna la visualizzazione delle ricette
+      }
+
+      // Funzione per gestire la presentazione delle ricette nel documento
+      function displayRecipes() {
+        const recipeList = document.getElementById("recipeList");
+        recipeList.innerHTML = "";
+
+        // Recupera le ricette dall'archivio locale o inizializza un array vuoto
+        const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+
+        // Aggiungi ciascuna ricetta alla lista
+        recipes.forEach((recipe, index) => {
+          const listItem = document.createElement("li");
+          listItem.innerHTML = `
+                    <h3>${recipe.name}</h3>
+                    <p><strong>Ingredienti:</strong> ${recipe.ingredients}</p>
+                    <p><strong>Istruzioni:</strong> ${recipe.instructions}</p>
+                `;
+          recipeList.appendChild(listItem);
+        });
+      }
+
+      // Funzione per gestire l'invio del modulo per l'aggiunta di una nuova ricetta
+      function addRecipe(event) {
+        event.preventDefault();
+
+        // Recupera i dati del modulo
+        const recipeName = document.getElementById("recipeName").value;
+        const recipeIngredients =
+          document.getElementById("recipeIngredients").value;
+        const recipeInstructions =
+          document.getElementById("recipeInstructions").value;
+
+        // Recupera o inizializza l'archivio locale delle ricette
+        const recipes = JSON.parse(localStorage.getItem("recipes")) || [];
+
+        // Aggiungi la nuova ricetta all'archivio
+        recipes.push({
+          name: recipeName,
+          ingredients: recipeIngredients,
+          instructions: recipeInstructions,
+        });
+
+        // Salva le ricette nell'archivio locale
+        localStorage.setItem("recipes", JSON.stringify(recipes));
+
+        // Svuota i campi del modulo
+        document.getElementById("recipeForm").reset();
+
+        // Aggiorna la visualizzazione delle ricette
+        displayRecipes();
+      }
+
+      // Aggiungi un gestore di eventi per l'invio del modulo
+      const recipeForm = document.getElementById("recipeForm");
+      recipeForm.addEventListener("submit", addRecipe);
+
+      // Aggiungi un gestore di eventi per il pulsante di eliminazione delle ricette
+      const deleteAllRecipesButton =
+        document.getElementById("deleteAllRecipes");
+      deleteAllRecipesButton.addEventListener("click", deleteAllRecipes);
+
+      // Mostra le ricette al caricamento della pagina
+      displayRecipes();
+    </script>
+  </body>
+</html>

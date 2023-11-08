@@ -1,0 +1,25 @@
+/* Stile per la sezione del menu */
+.menu {
+  float: right;
+  width: 300px;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 20px;
+}
+
+.menu img {
+  max-width: 100%;
+}
+
+.menu p {
+  font-size: 14px;
+}
+/* Fine Stile per la sezione del menu */

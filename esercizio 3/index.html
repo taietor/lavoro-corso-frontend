@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modulo di Registrazione</title>
+  </head>
+  <body>
+    <h1>Modulo di Registrazione</h1>
+    <form action="process.php" method="post">
+      <label for="name">Enter name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="password">Enter password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="address">Enter address:</label>
+      <input type="text" id="address" name="address" required /><br /><br />
+
+      <label for="sport">Select game:</label>
+
+      <label for="football">Calcio</label>
+      <input type="checkbox" id="football" name="sports" value="football" />
+      <br />
+
+      <label for="basketball">Basket</label>
+      <input type="checkbox" id="basketball" name="sports" value="basketball" />
+      <br />
+
+      <label for="tennis">Tennis</label>
+      <input type="checkbox" id="tennis" name="sports" value="tennis" />
+      <br />
+
+      <label for="volleyball">Pallavolo</label>
+      <input type="checkbox" id="volleyball" name="sports" value="volleyball" />
+      <br />
+
+      <label for="swimming">Nuoto</label>
+      <input type="checkbox" id="swimming" name="sports" value="swimming" />
+      <br />
+
+      <label for="hockey">Hockey</label>
+      <input type="checkbox" id="hockey" name="sports" value="hockey" />
+
+      <br /><br />
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" /> Male
+      <input type="radio" id="female" name="gender" value="female" /> Female
+      <input type="radio" id="other" name="gender" value="other" />
+      Other<br /><br />
+
+      <label for="age">Your age:</label>
+      <select id="age" name="age">
+        <option value="under18">Under 18</option>
+        <option value="18-30">18-30</option>
+        <option value="31-45">31-45</option>
+        <option value="46-60">46-60</option>
+        <option value="over60">Over 60</option></select
+      ><br /><br />
+
+      <label for="photo">Select a photo:</label>
+      <input type="file" id="photo" name="photo" /><br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
