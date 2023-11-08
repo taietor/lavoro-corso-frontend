@@ -24,6 +24,9 @@
           <option value="A">Altro</option>
         </select>
 
+        <label for="data_invio">Data Invio:</label>
+        <input type="date" id="data_invio" name="data_invio" required />
+
         <label for="interessi">Interessi:</label>
         <div class="interests-container">
           <div class="interest-checkbox">
@@ -82,6 +85,12 @@
         <textarea id="messaggio" name="messaggio" rows="4" required></textarea>
 
         <button type="submit">Invia</button>
+        <button type="reset">Resetta</button>
+
+        <script>
+          // Aggiungi uno script JavaScript per impostare la data attuale
+          document.getElementById("data_invio").valueAsDate = new Date();
+        </script>
       </form>
     </div>
   </body>
