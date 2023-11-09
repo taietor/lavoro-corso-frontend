@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modulo di Registrazione</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img
+        src="6dDoc8GV9fYUPExgLYPqqT-1200-80.jpg"
+        alt="Logo"
+        width="200"
+        height="200"
+      />
+    </div>
+
+    <div class="container">
+      <h1>Modulo di Registrazione</h1>
+      <form id="registrationForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required />
+
+        <label for="surname">Cognome:</label>
+        <input type="text" id="surname" required />
+
+        <label for="birthdate">Data di Nascita:</label>
+        <input type="date" id="birthdate" required />
+
+        <label for="country">Paese di Origine:</label>
+        <input type="text" id="country" required />
+        <label for="profilePic">Foto Profilo URL:</label>
+
+        <input
+          type="url"
+          id="profilePic"
+          placeholder="Inserisci URL dell'immagine"
+        />
+
+        <button type="button" onclick="createProfile()">Invia</button>
+      </form>
+      <div id="profileCard" class="hidden">
+        <h2>La Tua Scheda</h2>
+        <div id="profileInfo"></div>
+        <img id="profileImage" src="" alt="Foto Profilo" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
