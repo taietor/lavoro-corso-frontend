@@ -1,0 +1,145 @@
+body {
+  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif; /* Cambiato il font per renderlo più leggibile */
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  text-align: center;
+  margin: 20px;
+}
+
+.color-table {
+  width: 100%;
+  border-collapse: separate; /* Per separare i bordi delle celle */
+  border-spacing: 20px 40px; /* Distanza tra le celle */
+}
+
+.color-table td {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.color-table tr {
+  height: 240px; /* 200px (altezza della cella) + 40px di spazio verticale */
+}
+
+.color-table td:hover {
+  transform: scale(1.1);
+}
+
+.color-name {
+  color: #000; /* Colore del testo per renderlo più leggibile */
+  margin-top: 10px;
+}
+
+/* Colori Rosso */
+.red {
+  background-color: #ff0000;
+}
+.light-red {
+  background-color: #ff6666;
+}
+.medium-red {
+  background-color: #ff3333;
+}
+.dark-red {
+  background-color: #990000;
+}
+.darker-red {
+  background-color: #660000;
+}
+
+/* Colori Giallo */
+.yellow {
+  background-color: #ffff00;
+}
+.light-yellow {
+  background-color: #ffff66;
+}
+.medium-yellow {
+  background-color: #ffff33;
+}
+.dark-yellow {
+  background-color: #999900;
+}
+.darker-yellow {
+  background-color: #666600;
+}
+
+/* Colori Verde */
+.green {
+  background-color: #00ff00;
+}
+.light-green {
+  background-color: #66ff66;
+}
+.medium-green {
+  background-color: #33ff33;
+}
+.dark-green {
+  background-color: #009900;
+}
+.darker-green {
+  background-color: #006600;
+}
+
+/* Colori Azzurro */
+.cyan {
+  background-color: #00ffff;
+}
+.light-cyan {
+  background-color: #66ffff;
+}
+.medium-cyan {
+  background-color: #33ffff;
+}
+.dark-cyan {
+  background-color: #009999;
+}
+.darker-cyan {
+  background-color: #006666;
+}
+
+/* Colori Bianco/Nero */
+.white {
+  background-color: #ffffff;
+}
+.light-gray {
+  background-color: #cccccc;
+}
+.gray {
+  background-color: #999999;
+}
+.dark-gray {
+  background-color: #666666;
+}
+.black {
+  background-color: #000000;
+}
+
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
