@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+#sidebar {
+  width: 100%;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+#main-content {
+  width: 100%;
+  background-color: #87ceeb; /* Azzurino */
+  padding: 10px;
+}
+
+#sub-content {
+  width: 100%;
+  background-color: #1e90ff; /* Blu scuro */
+  padding: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

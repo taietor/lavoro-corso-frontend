@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <!-- Logo Tesla più piccolo -->
+      <img src="logo.jpg" alt="Tesla Logo" class="logo" />
+
+      <!-- Pulsanti di navigazione -->
+      <div>
+        <button class="btn btn-light">Home</button>
+        <button class="btn btn-light">About</button>
+        <button class="btn btn-light">Contatti</button>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="car-card" id="carCard">
+        <!-- Immagine della macchina con animazioni al passaggio del mouse -->
+        <img src="tesla1.jpg" alt="Tesla Modello X" class="car-image" />
+
+        <!-- Statistiche e pulsante di acquisto -->
+        <div>
+          <h2>Tesla Modello X</h2>
+          <p>
+            Statistiche: 1.020 - 670 CV 1.020 - 670 CV. Coppia massima. -
+            Accelerazione (0-100 km/h) 3,9 - 2,6 sec. Velocità 250 - 262 km/h.
+            Peso/potenza. 3,5 - 2,4 kg/CV.
+          </p>
+          <button class="btn btn-primary">Acquista</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const carCard = document.getElementById("carCard");
+      const carImage = document.querySelector(".car-image");
+      // Lista di immagini da visualizzare
+      const images = ["xray.jpg", "tesla1.jpg"];
+      let currentIndex = 0;
+      // Aggiungi un listener per il passaggio del mouse sulla scheda
+      carCard.addEventListener("mouseenter", () => {
+        // Cambia l'immagine nella scheda
+        currentIndex = (currentIndex + 1) % images.length;
+        carImage.src = images[currentIndex];
+      });
+    </script>
+  </body>
+</html>

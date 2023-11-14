@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina 1</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header img {
+        max-height: 50px; /* Imposta l'altezza massima del logo */
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .card {
+        width: 80%;
+        margin-top: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column; /* Cambiato da 'row' a 'column' */
+      }
+
+      .card img {
+        width: 200px;
+        height: auto;
+      }
+
+      .card-content {
+        padding: 20px;
+        display: flex;
+        /* Cambiato da 'row' a 'column' */
+        align-items: center;
+      }
+
+      .card-content h2 {
+        margin-bottom: 10px;
+      }
+
+      .description {
+        text-align: left;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="tik-tok-logo_578229-290.jpg" alt="Logo" />
+      <button onclick="window.location.href='index.html'">
+        Pagina Principale
+      </button>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="card-content">
+          <h2>Titolo Post 1</h2>
+          <img src="tik-tok-logo_578229-290.jpg" alt="Immagine 1" />
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolore
+            deleniti cum nostrum, officia voluptas explicabo vel! Quas
+            accusantium deserunt aut sit fugiat repellat quis architecto
+            laborum! Sapiente, deserunt modi.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h2 style="">Titolo Post 2</h2>
+          <img src="tik-tok-logo_578229-290.jpg" alt="Immagine 2" />
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            similique dicta corporis ullam voluptatem mollitia atque dolorum
+            consequuntur esse rerum aspernatur nostrum, eius excepturi, delectus
+            veritatis! Eligendi, porro? Molestias, ipsa?
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h2>Titolo Post 3</h2>
+          <img src="tik-tok-logo_578229-290.jpg" alt="Immagine 3" />
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            aliquam quas ex quibusdam, id nihil nesciunt, quisquam in quos error
+            eos ipsam inventore perspiciatis cumque atque nobis unde libero
+            facere?
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>Team 5</footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background-image: url("back.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden; /* Evita lo scrolling */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.car-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 40%; /* Larghezza massima della card */
+}
+
+.car-card:hover {
+  transform: scale(1.1);
+}
+
+.car-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
