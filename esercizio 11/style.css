@@ -1,4 +1,3 @@
-body,
 h1,
 h2,
 h3,
@@ -12,6 +11,7 @@ li {
 body {
   font-family: "Arial", sans-serif;
   background-color: #f8f9fa;
+  margin: 0;
 }
 
 .container {
@@ -112,6 +112,40 @@ a.cta {
   color: #fff;
   animation: bounce 0.5s ease infinite;
 }
+#footer {
+  padding: 10px 0;
+  background-color: #343a40; /* Cambia colore di sfondo */
+}
+
+#footer-logo {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#footer-logo img {
+  height: 200px; /* Riduci altezza del logo */
+}
+
+#footer-links {
+  margin-top: 20px;
+}
+
+#footer .row {
+  align-items: center;
+}
+
+#github-link {
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+#github-link:hover {
+  background-color: #007bff;
+  color: #fff;
+  animation: bounce 0.5s ease infinite;
+}
 
 @keyframes bounce {
   0%,
@@ -127,4 +161,12 @@ a.cta {
   60% {
     transform: translateY(-5px);
   }
+}
+
+#footer .container-fluid {
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
