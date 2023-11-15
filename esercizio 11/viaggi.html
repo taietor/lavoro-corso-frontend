@@ -4,14 +4,28 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  />
-      <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ezsscvKmZfFLg5eP7VAHsUBM2i2BRZjG+gMEitvMVA8CerunY7UyrWtTti1O68Kj" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-ezsscvKmZfFLg5eP7VAHsUBM2i2BRZjG+gMEitvMVA8CerunY7UyrWtTti1O68Kj"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
   </head>
   <body>
     <nav
@@ -45,7 +59,6 @@
 
     <div class="container mt-5">
       <h2>Destinazioni</h2>
-
       <div class="card-deck">
         <div
           class="card"
@@ -88,135 +101,30 @@
           </div>
         </div>
 
-        <div
-          class="card"
-          onmouseover="showInfo('San pietrosburgo')"
-          onmouseout="hideInfo()"
-        >
-          <img
-            src="asstets/sanpietro.jpg"
-            class="card-img-top img-thumbnail"
-            alt="San pietrosburgo"
-          />
-          <div class="card-body">
-            <h5 class="card-title">San pietrosburgo</h5>
-            <p class="card-text">Prezzo: $1000</p>
-            <button
-              class="btn btn-primary"
-              onclick="prenotaViaggio('San pietrosburgo')"
-            >
-              Prenota
-            </button>
-          </div>
-        </div>
-
-        <div class="container mt-5">
-          <h2>Destinazioni</h2>
-    
-          <div class="card-deck">
-            <div
-              class="card"
-              onmouseover="showInfo('Tokyo')"
-              onmouseout="hideInfo()"
-            >
-              <img
-                src="asstets/tokyo.jpg"
-                class="card-img-top img-thumbnail"
-                alt="Tokyo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Tokyo</h5>
-                <p class="card-text">Prezzo: $2000</p>
-                <button class="btn btn-primary" onclick="prenotaViaggio('Tokyo')">
-                  Prenota
-                </button>
-              </div>
-            </div>
-    
-            <div
-              class="card"
-              onmouseover="showInfo('San pietrosburgo')"
-              onmouseout="hideInfo()"
-            >
-              <img
-                src="asstets/sanpietro.jpg"
-                class="card-img-top img-thumbnail"
-                alt="San pietrosburgo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">San pietrosburgo</h5>
-                <p class="card-text">Prezzo: $1000</p>
-                <button
-                  class="btn btn-primary"
-                  onclick="prenotaViaggio('San pietrosburgo')"
-                >
-                  Prenota
-                </button>
-              </div>
-            </div>
-    
-            <div
-              class="card"
-              onmouseover="showInfo('San pietrosburgo')"
-              onmouseout="hideInfo()"
-            >
-              <img
-                src="asstets/sanpietro.jpg"
-                class="card-img-top img-thumbnail"
-                alt="San pietrosburgo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">San pietrosburgo</h5>
-                <p class="card-text">Prezzo: $1000</p>
-                <button
-                  class="btn btn-primary"
-                  onclick="prenotaViaggio('San pietrosburgo')"
-                >
-                  Prenota
-                </button>
-              </div>
-            </div>
-
-        <!-- Ripeti questo blocco per le altre destinazioni -->
+        <!-- Aggiungi altre destinazioni qui -->
       </div>
     </div>
+
     <!-- FOOTER -->
-    <footer id="footer" class="bg-dark text-white w-100">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6">
-            <!-- Logo del footer (torna alla homepage) -->
-            <a id="footer-logo" href="index.html">
-              <img
-                src="asstets/clubigram-logowhite.png"
-                alt="Logo"
-                height="50"
-                class="mb-2"
-              />
-            </a>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="asstets/clubigram-logowhite.png" alt="Logo" />
           </div>
-          <div class="col-md-6" id="footer-links">
-            <!-- Link per navigare nelle pagine -->
-            <div class="text-md-right">
-              <a href="index.html" class="text-white">Home</a> |
-              <a href="about.html" class="text-white">About</a> |
-              <a href="viaggi.html" class="text-white">Viaggi</a> |
-              <a href="privacy.html" class="text-white">Privacy Policy</a> |
-              <a href="cookie.html" class="text-white"> Cookie </a>
-            </div>
+          <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <span class="text-muted">&copy; 2023</span>
-            <a
-              href="https://github.com/taietor"
-              target="_blank"
-              id="github-link"
-              class="text-white ml-2 fab fa-github"
-              ><i class="fab fa-github"></i>Taietor</a
+        <div class="footer-bottom">
+          <p>
+            &copy; 2023 Your Website |<a href="https://github.com/taietor"
+              >Taietor</a
             >
-          </div>
+          </p>
         </div>
       </div>
     </footer>
