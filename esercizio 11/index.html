@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-ezsscvKmZfFLg5eP7VAHsUBM2i2BRZjG+gMEitvMVA8CerunY7UyrWtTti1O68Kj" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+
+    <style>
+      .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s, transform 1s;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    </style>
+
+    <title>La Tua Agenzia di Viaggi</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light jumbotron-fluid jumbotron">
+      <div class="container">
+        <a class="navbar-brand cta" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link cta" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cta" href="viaggi.html">Viaggi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row section" id="section1">
+        <!-- Sezione 1: Immagine a sinistra, testo a destra -->
+        <div class="col-md-6">
+          <img src="asstets/best.jpg" class="img-fluid" alt="Immagine 1" />
+        </div>
+        <div class="col-md-6">
+          <h2>Il nostro punto strategico</h2>
+          <h4>Le nostre disponibilità per i clienti</h4>
+          <p>
+            Descrizione della nostra posizione strategica e delle disponibilità
+            offerte ai nostri clienti.
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row section" id="section2">
+        <!-- Sezione 2: Immagine a destra, testo a sinistra -->
+        <div class="col-md-6">
+          <h2>Top Viaggi di Sempre</h2>
+          <h4>Perché scegliere questi viaggi</h4>
+          <ul>
+            <li>Destinazione 1: Spiegazione del motivo di scelta</li>
+            <li>Destinazione 2: Spiegazione del motivo di scelta</li>
+            <li>Destinazione 3: Spiegazione del motivo di scelta</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="asstets/figo.jpg" class="img-fluid" alt="Immagine 2" />
+        </div>
+      </div>
+    
+
+    <hr />
+
+    <div class="container mt-5">
+      <div class="row section" id="section3">
+        <!-- Sezione 1: Immagine a sinistra, testo a destra -->
+        <div class="col-md-6">
+          <img src="asstets/best.jpg" class="img-fluid" alt="Immagine 1" />
+        </div>
+        <div class="col-md-6">
+          <h2>Il nostro punto strategico</h2>
+          <h4>Le nostre disponibilità per i clienti</h4>
+          <p>
+            Descrizione della nostra posizione strategica e delle disponibilità
+            offerte ai nostri clienti.
+          </p>
+        </div>
+      </div>
+    
+
+    <hr />
+
+    <div class="row section" id="section4">
+      <!-- Sezione 2: Immagine a destra, testo a sinistra -->
+      <div class="col-md-6">
+        <h2>Top Viaggi di Sempre</h2>
+        <h4>Perché scegliere questi viaggi</h4>
+        <ul>
+          <li>Destinazione 1: Spiegazione del motivo di scelta</li>
+          <li>Destinazione 2: Spiegazione del motivo di scelta</li>
+          <li>Destinazione 3: Spiegazione del motivo di scelta</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <img src="asstets/figo.jpg" class="img-fluid" alt="Immagine 2" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white w-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Logo del footer (torna alla homepage) -->
+            <a id="footer-logo" href="index.html">
+              <img src="asstets/clubigram-logowhite.png" alt="Logo" height="50" class="mb-2" />
+            </a>
+          </div>
+          <div class="col-md-6" id="footer-links">
+            <!-- Link per navigare nelle pagine -->
+            <div class="text-md-right">
+              <a href="index.html" class="text-white">Home</a> |
+              <a href="about.html" class="text-white">About</a> |
+              <a href="viaggi.html" class="text-white">Viaggi</a> |
+              <a href="privacy.html" class="text-white">Privacy Policy</a> |
+              <a href="cookie.html" class="text-white"> Cookie </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <span class="text-muted">&copy; 2023</span>
+            <a href="https://github.com/taietor" target="_blank" id="github-link" class="text-white ml-2 fab fa-github"><i class="fab fa-github"></i>Taietor</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <!-- Aggiunta dei tuoi script JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
