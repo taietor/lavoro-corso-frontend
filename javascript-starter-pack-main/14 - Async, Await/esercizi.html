@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function recuperaDatiDaAPI() {
+        // Simula una richiesta asincrona a una API remota
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+
+        // Dati immaginari restituiti dalla API
+        const datiDallaAPI = { risultato: "Dati dalla API" };
+
+        // Restituisci i dati avvolti in una Promise risolta
+        return Promise.resolve(datiDallaAPI);
+      }
+
+      // Esempio di utilizzo
+      async function eseguiRecuperoDati() {
+        try {
+          const dati = await recuperaDatiDaAPI();
+          console.log("Dati recuperati:", dati);
+        } catch (errore) {
+          console.error(
+            "Si è verificato un errore durante il recupero dei dati:",
+            errore
+          );
+        }
+      }
+
+      // Chiamata della funzione di recupero dati
+      eseguiRecuperoDati();
+
+      async function elaboraDati(datiOriginali) {
+        // Simula l'elaborazione asincrona dei dati
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        // Manipolazione dei dati originali (ad esempio, aggiungi un campo "modificato: true")
+        const datiModificati = { ...datiOriginali, modificato: true };
+
+        // Restituisci i dati elaborati avvolti in una Promise risolta
+        return Promise.resolve(datiModificati);
+      }
+
+      // Esempio di utilizzo
+      async function eseguiElaborazioneDati() {
+        const datiOriginali = { campo1: "Valore1", campo2: "Valore2" };
+
+        try {
+          const datiElaborati = await elaboraDati(datiOriginali);
+          console.log("Dati elaborati:", datiElaborati);
+        } catch (errore) {
+          console.error(
+            "Si è verificato un errore durante l'elaborazione dei dati:",
+            errore
+          );
+        }
+      }
+
+      // Chiamata della funzione di elaborazione dati
+      eseguiElaborazioneDati();
+    </script>
+  </body>
+</html>

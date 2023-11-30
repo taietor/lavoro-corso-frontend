@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback in JavaScript</title>
+  </head>
+  <body>
+    <button id="myButton">Clicca qui</button>
+
+    <script>
+      // DEFINIZIONE DELLA NOSTRA CALLBACK
+      function visualizzaMessaggio() {
+        console.log("Il pulsante è stato cliccato!");
+      }
+      // visualizzaMessaggio è la nostra callback
+      // che verrà eseguita quando il pulsante viene cliccato.
+
+      // Selezioniamo il pulsante dal DOM
+      var pulsante = document.getElementById("myButton");
+
+      // Aggiungiamo un listener per l'evento di click al pulsante
+      pulsante.addEventListener("click", visualizzaMessaggio);
+
+      function calcolaSomma(numero1, numero2, callback) {
+        const somma = numero1 + numero2;
+        callback(somma);
+      }
+
+      // Callback per visualizzare il risultato
+      const visualizzaRisultato = (risultato) => {
+        console.log("Il risultato è: " + risultato);
+      };
+
+      const moltiplicaPerDue = (risultato) => {
+        const risultatoMoltiplicato = risultato * 2;
+        console.log(
+          "Il risultato moltiplicato per 2 è: " + risultatoMoltiplicato
+        );
+      };
+
+      calcolaSomma(10, 3, visualizzaRisultato);
+      calcolaSomma(4, 4, moltiplicaPerDue);
+    </script>
+  </body>
+</html>
