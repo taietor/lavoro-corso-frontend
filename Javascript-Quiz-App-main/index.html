@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <!-- Metadati del documento -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.5/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <!-- Collegamento al file di stile e all'icon set di Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>App Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Schermata di inizio del quiz -->
+      <div class="start-screen">
+        <h1 class="heading">App Quiz</h1>
+        <!-- Impostazioni del quiz (numero di domande, categoria, difficoltà, tempo) -->
+        <div class="settings">
+          <label for="num-questions">Numero di Domande:</label>
+
+          <select id="num-questions">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="20">30</option>
+            <option value="20">40</option>
+            <option value="20">50</option>
+          </select>
+          <!-- Opzioni per la categoria delle domande -->
+          <label for="category">Seleziona Categoria:</label>
+          <select id="category">
+            <option value="">qualsiasi categoria</option>
+            <option value="9">conoscenze generali</option>
+            <option value="10">libri</option>
+            <option value="11">film</option>
+            <option value="12">musica</option>
+            <option value="14">televisione</option>
+            <option value="15">videogiochi</option>
+            <option value="16">giochi da tavolo</option>
+            <option value="17">scienza e natura</option>
+            <option value="18">computer</option>
+            <option value="19">matematica</option>
+            <option value="20">mitologia</option>
+            <option value="21">sport</option>
+            <option value="22">geografia</option>
+            <option value="23">storia</option>
+            <option value="24">politica</option>
+            <option value="25">arte</option>
+            <option value="28">veicoli</option>
+          </select>
+          <!-- Opzioni per la difficoltà delle domande -->
+          <label for="difficulty">Seleziona difficoltà:</label>
+          <select id="difficulty">
+            <option value="">qualsiasi difficoltà</option>
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+          <!-- Opzioni per il tempo per ogni domanda -->
+          <label for="time">Seleziona tempo per domanda:</label>
+          <select id="time">
+            <option value="10">10 secondi</option>
+            <option value="15">15 secondi</option>
+            <option value="20">20 secondi</option>
+            <option value="25">25 secondi</option>
+            <option value="30">30 secondi</option>
+            <option value="60">60 secondi</option>
+          </select>
+        </div>
+        <!-- Pulsante per avviare il quiz -->
+        <button class="btn start">Inizia Quiz</button>
+        <!-- Pulsante per tornare alla Home -->
+        <button class="btn home">Torna alla Home</button>
+      </div>
+      <!-- Schermata del quiz -->
+      <div class="quiz hide">
+        <!-- Timer e barra di progresso -->
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text"></span>
+          </div>
+        </div>
+        <!-- Informazioni sulla domanda corrente -->
+        <div class="question-wrapper">
+          <div class="number">
+            Domanda <span class="current">1</span>
+            <span class="total">/10</span>
+          </div>
+          <div class="question">
+            Questa è una domanda? Questa è una domanda?
+          </div>
+        </div>
+        <!-- Opzioni di risposta -->
+        <div class="answer-wrapper">
+          <div class="answer selected">
+            <span class="text">risposta</span>
+            <!-- Icona di conferma per la risposta selezionata -->
+            <span class="checkbox">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        <!-- Pulsanti per inviare e passare alla domanda successiva -->
+        <button class="btn submit" disabled>Invia</button>
+        <button class="btn next">Avanti</button>
+      </div>
+      <!-- Schermata finale del quiz -->
+      <div class="end-screen hide">
+        <h1 class="heading">App Quiz</h1>
+        <!-- Punteggio finale ottenuto -->
+        <div class="score">
+          <span class="score-text">Il tuo punteggio:</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/10</span>
+          </div>
+        </div>
+        <!-- Pulsante per ricominciare il quiz -->
+        <button class="btn restart">Ricomincia Quiz</button>
+      </div>
+    </div>
+
+    <!-- Collegamento al file di script JavaScript -->
+    <script src="script.js"></script>
+  </body>
+
+  <script>
+    const themeMap = {
+      dark: "light",
+      light: "solar",
+      solar: "dark",
+    };
+
+    const theme =
+      localStorage.getItem("theme") ||
+      ((tmp = Object.keys(themeMap)[0]),
+      localStorage.setItem("theme", tmp),
+      tmp);
+    const bodyClass = document.body.classList;
+    bodyClass.add(theme);
+
+    function toggleTheme() {
+      const current = localStorage.getItem("theme");
+      const next = themeMap[current];
+
+      bodyClass.replace(current, next);
+      localStorage.setItem("theme", next);
+    }
+
+    document.getElementById("themeButton").onclick = toggleTheme;
+  </script>
+</html>

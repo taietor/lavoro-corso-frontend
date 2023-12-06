@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <style>
+      /* Aggiungi regole CSS personalizzate */
+      .game-card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .game-card img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <title>Game</title>
+  </head>
+  <body class="bg-gray-200 min-h-screen flex flex-col">
+    <div
+      class="container mx-auto my-8 p-8 bg-white shadow-lg rounded-lg flex-1 relative"
+    >
+      <h1 class="text-5xl font-extrabold mb-6">Games</h1>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8"
+      >
+        <!-- Game 1: Carta, Sasso, Forbice -->
+        <div
+          class="game-card hover:bg-red-500 hover:text-white transition-transform transform scale-105 relative"
+        >
+          <!-- Contenuto della slide 1 -->
+          <h2 class="text-xl font-semibold mb-4">Carta, Sasso, Forbice</h2>
+          <!-- Aggiungi contenuto e immagine del gioco -->
+          <a href="/general games/index.html">
+            <img src="/img/papper.JPG" alt="Preview" class="w-full h-auto" />
+          </a>
+        </div>
+
+        <!-- Game 2: Snake -->
+        <div class="game-card hover:bg-red-500 hover:text-white">
+          <h2 class="text-xl font-semibold mb-4">Snake</h2>
+          <a href="/Snake Game in JavaScript/index.html">
+            <img src="/img/snake.JPG" alt="Preview" />
+          </a>
+        </div>
+
+        <!-- Game 3: Hangman -->
+        <div class="game-card hover:bg-red-500 hover:text-white">
+          <h2 class="text-xl font-semibold mb-4">Hangman</h2>
+          <a href="/Hangman Game/index.html">
+            <img src="/img/hangman.JPG" alt="Preview" />
+          </a>
+        </div>
+
+        <!-- Game 4: Memory Game -->
+        <div class="game-card hover:bg-red-500 hover:text-white">
+          <h2 class="text-xl font-semibold mb-4">Memory Game</h2>
+          <a href="/Memory Card Games/Memory Cards Game [Demo 2]/index.html">
+            <img src="/img/memory game.JPG" alt="Preview" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottone per tornare alla home.html -->
+      <a
+        href="home.html"
+        class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition duration-300"
+        >Torna alla Home</a
+      >
+    </div>
+  </body>
+</html>
